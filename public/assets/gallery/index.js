@@ -6,5 +6,6 @@ import image5 from './image5.jpg';
 import image6 from './image6.jpg';
 import image7 from './image7.jpg';
 import image8 from './image8.jpg';
+import mixing from './mixing.jpg';
 
-export {image1, image2, image3, image4, image5, image6, image7, image8};
+export {image1, image2, image3, image4, image5, image6, image7, image8, mixing};

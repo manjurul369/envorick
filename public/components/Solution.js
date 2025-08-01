@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import ScrollReveal from '@/public/components/ScrollReveal';
 import Image from 'next/image';
-import { image1, image2, image3 } from '../assets/gallery';
+import { image1, mixing, image5 } from '../assets/gallery';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 export default function SolutionSection(){
-  const images = [image1, image2, image3];
+  const images = [image5, mixing, image1];
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
   const [resetTimer, setResetTimer] = useState(0); // Timer reset trigger
