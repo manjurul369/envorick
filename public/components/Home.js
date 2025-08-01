@@ -73,12 +73,12 @@ export default function HeroSection() {
             {images.map((image, index) => (
                 <div
                     key={index}
-                    className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out ${
+                    className={`absolute inset-0 bg-cover bg-center transition-opacity duration-300 ease-in-out ${
                         index === currentSlide ? 'opacity-100' : 'opacity-0'
                     }`}
                     style={{ 
                         backgroundImage: `url(${image.src})`,
-                        animation: index === currentSlide ? 'slowZoom 6s ease-in-out infinite' : 'none',
+                        animation: index === currentSlide ? 'slowZoom 6.3s ease-in-out infinite' : 'none',
                         transform: index === currentSlide ? 'scale(1)' : 'scale(1.04)'
                     }}
                 ></div>
