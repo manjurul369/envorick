@@ -22,7 +22,7 @@ export default function TimelineSection() {
   };
 
   return (
-    <section id="timeline" className="py-20 bg-gray-50">
+    <section id="timeline" className="py-40 bg-gray-50">
       <div className="container mx-auto px-6">
         <ScrollReveal animation="fadeUp">
           <div className="text-center mb-16">

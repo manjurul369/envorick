@@ -10,23 +10,41 @@ export default function Nav() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     useEffect(() => {
-        const handleScroll = () => {
-            const sections = ['home', 'problem', 'solution', 'performance', 'impact', 'timeline', 'updates', 'future', 'contact'];
-            const scrollPosition = window.scrollY + 150;
+        const sections = ['home', 'problem', 'solution', 'performance', 'impact', 'timeline', 'team', 'updates', 'contact'];
 
-            for (const sectionId of sections) {
-                const section = document.getElementById(sectionId);
-                if (section && scrollPosition >= section.offsetTop && scrollPosition < section.offsetTop + section.offsetHeight) {
-                    setActiveLink(sectionId);
-                    break;
-                }
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        setActiveLink(entry.target.id);
+                    }
+                });
+            },
+            {
+                rootMargin: '-50% 0px -50% 0px'
             }
+        );
+
+        const timer = setTimeout(() => {
+            sections.forEach((id) => {
+                const section = document.getElementById(id);
+                if (section) {
+                    observer.observe(section);
+                }
+            });
+        }, 500);
+
+
+        return () => {
+            clearTimeout(timer);
+            sections.forEach((id) => {
+                const section = document.getElementById(id);
+                if (section) {
+                    observer.unobserve(section);
+                }
+            });
         };
-
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
     }, []);
-
 
     const navLinks = [
         { id: 'home', title: 'Home' },
@@ -35,6 +53,7 @@ export default function Nav() {
         { id: 'performance', title: 'Performance' },
         { id: 'impact', title: 'Impact' },
         { id: 'timeline', title: 'Timeline' },
+        { id: 'team', title: 'Team' },
         { id: 'updates', title: 'Updates' },
         { id: 'contact', title: 'Contact' },
     ];
@@ -46,6 +65,7 @@ export default function Nav() {
     const handleMobileNavClick = () => {
         setIsMobileMenuOpen(false);
     };
+
     return (
         <header className="fixed top-0 left-0 right-0 z-50 bg-white backdrop-blur-sm shadow-md transition-all duration-300">
             <div className="container mx-auto flex justify-between items-center py-4 px-6 md:p-6">

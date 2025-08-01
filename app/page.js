@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect } from 'react';
+import Nav from '@/public/components/Nav';
 import HeroSection from '@/public/components/Home';
 import ProblemSection from '@/public/components/Problem';
 import ScrollReveal from '@/public/components/ScrollReveal';
@@ -27,25 +28,16 @@ export default function App() {
   return (
     <div className="bg-white font-sans">
       <main>
+        <Nav />
         <HeroSection />
-        <ScrollReveal animation="fadeUp">
-          <ProblemSection />
-        </ScrollReveal>
+        <ProblemSection />
         <SolutionSection />
         <PerformanceSection />
         <ImpactSection />
-        <ScrollReveal animation="fadeUp">
-          <TimelineSection />
-        </ScrollReveal>
-        <ScrollReveal animation="fadeUp">
-          <TeamSection />
-        </ScrollReveal>
-        <ScrollReveal animation="fadeUp">
-          <UpdatesSection />
-        </ScrollReveal>
-        <ScrollReveal animation="fadeUp">
-          <ContactSection />
-        </ScrollReveal>
+        <TimelineSection />
+        <TeamSection />
+        <UpdatesSection />
+        <ContactSection />
       </main>
 
       <Footer />
