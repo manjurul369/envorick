@@ -19,8 +19,22 @@
   }
 }
 
+*{
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Slideshow zoom animation */
+@keyframes slowZoom {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.04);
+  }
 }

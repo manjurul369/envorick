@@ -1,36 +1,104 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# EnvoRick Website
 
-## Getting Started
+A Next.js website for EnvoRick - Converting Plastic Waste into Sustainable Construction Bricks.
 
-First, run the development server:
+## 🚀 Deploy to Vercel
+
+This website is optimized for Vercel deployment. Follow these steps:
+
+### Method 1: Deploy from GitHub (Recommended)
+
+1. **Push to GitHub:**
+   ```bash
+   git init
+   git add .
+   git commit -m "Initial commit"
+   git branch -M main
+   git remote add origin https://github.com/yourusername/envorick-website.git
+   git push -u origin main
+   ```
+
+2. **Deploy on Vercel:**
+   - Go to [vercel.com](https://vercel.com)
+   - Click "New Project"
+   - Import your GitHub repository
+   - Vercel will auto-detect Next.js and configure settings
+   - Click "Deploy"
+
+### Method 2: Deploy with Vercel CLI
+
+1. **Install Vercel CLI:**
+   ```bash
+   npm i -g vercel
+   ```
+
+2. **Deploy:**
+   ```bash
+   vercel
+   ```
+
+3. **Follow the prompts:**
+   - Link to existing project or create new
+   - Confirm settings
+   - Deploy automatically
+
+## 🛠️ Local Development
 
 ```bash
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Build for production
+npm run build
+
+# Start production server
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📁 Project Structure
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```
+├── app/
+│   ├── globals.css
+│   ├── layout.js
+│   └── page.js
+├── public/
+│   ├── assets/
+│   │   ├── gallery/
+│   │   ├── team/
+│   │   └── posts/
+│   └── components/
+└── package.json
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🌐 Features
 
-## Learn More
+- Responsive design for all devices
+- Interactive slideshows with touch controls
+- Scroll-triggered animations
+- Team member showcase
+- Project updates with real images
+- Contact section with social links
+- Performance metrics with animated counters
+- Timeline with snake layout for mobile
 
-To learn more about Next.js, take a look at the following resources:
+## 🔧 Configuration
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Framework:** Next.js 15.3.3
+- **Styling:** Tailwind CSS 4
+- **Icons:** Lucide React
+- **Images:** Next.js Image optimization
+- **Deployment:** Vercel-ready configuration
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📞 Contact
 
-## Deploy on Vercel
+For questions about deployment or the project:
+- Email: manjurul.ses.bu@gmail.com
+- Phone: +8801767-980780
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Built with ❤️ by Team EnvoRick
