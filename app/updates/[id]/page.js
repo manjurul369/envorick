@@ -118,7 +118,7 @@ export default function PostPage() {
 
         {/* Large Gallery Slider */}
         <div className="mb-12">
-          <div className="relative w-full h-[500px] lg:h-[600px] overflow-hidden rounded-xl shadow-2xl">
+          <div className={`${post.id === "4" ? "h-[500px]" : "h-[200px]"} relative w-full lg:h-[600px] overflow-hidden rounded-xl shadow-2xl`}>
             <div 
               className="flex transition-transform duration-500 ease-in-out h-full"
               style={{ transform: `translateX(-${currentSlide * 100}%)` }}
@@ -126,11 +126,11 @@ export default function PostPage() {
               onTouchEnd={handleTouchEnd}
             >
               {post.images.map((image, index) => (
-                <div key={index} className="w-full flex-shrink-0 h-full">
+                <div key={index} className="w-full flex justify-center flex-shrink-0 h-full">
                   <Image 
                     src={image} 
                     alt={`${post.title} - Image ${index + 1}`} 
-                    className="w-full h-full object-cover" 
+                    className={`${post.id === "4" ? "w-auto" : "w-full"} h-full object-cover`}
                     priority={index === 0}
                   />
                 </div>
@@ -140,7 +140,7 @@ export default function PostPage() {
             {/* Navigation Buttons */}
             <button
               onClick={prevSlide}
-              className="absolute left-4 top-1/2 transform -translate-y-1/2 p-3 rounded-full bg-white/80 hover:bg-white text-gray-800 hover:scale-110 transition-all duration-200 shadow-lg"
+              className="absolute hidden lg:block left-4 top-1/2 transform -translate-y-1/2 p-3 rounded-full bg-white/80 hover:bg-white text-gray-800 hover:scale-110 transition-all duration-200 shadow-lg"
               disabled={isAnimating}
             >
               <ChevronLeft size={28} />
@@ -148,21 +148,21 @@ export default function PostPage() {
             
             <button
               onClick={nextSlide}
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 p-3 rounded-full bg-white/80 hover:bg-white text-gray-800 hover:scale-110 transition-all duration-200 shadow-lg"
+              className="absolute hidden lg:block right-4 top-1/2 transform -translate-y-1/2 p-3 rounded-full bg-white/80 hover:bg-white text-gray-800 hover:scale-110 transition-all duration-200 shadow-lg"
               disabled={isAnimating}
             >
               <ChevronRight size={28} />
             </button>
 
             {/* Dot Indicators */}
-            <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-2">
+            <div className="absolute bottom-4 lg:bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-2">
               {post.images.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => goToSlide(index)}
-                  className={`w-4 h-4 rounded-full transition-all duration-200 ${
+                  className={`w-2 lg:w-4 h-2 lg:h-4 rounded-full transition-all duration-200 ${
                     index === currentSlide
-                      ? 'bg-green-600 scale-125 shadow-lg'
+                      ? 'bg-green-600 scale-110 shadow-lg'
                       : 'bg-white/60 hover:bg-white/80'
                   }`}
                   disabled={isAnimating}

@@ -37,11 +37,12 @@ export default function UpdatesSection() {
                     <p className="text-gray-600 mb-6">{post.description.substring(0, 200)}...</p>
                   </ScrollReveal>
                   
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
                     {post.images.slice(0, 3).map((img, imgIndex) => (
                       <ScrollReveal 
                         key={imgIndex}
                         animation="fadeUp"
+                        className={`${imgIndex >= 1 ? 'hidden sm:block' : ''} ${imgIndex >= 2 ? 'lg:block' : ''}`}
                       >
                         <Image 
                           src={img} 
