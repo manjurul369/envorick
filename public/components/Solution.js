@@ -113,7 +113,7 @@ export default function SolutionSection(){
                   {/* Navigation Buttons */}
                   <button
                     onClick={prevSlide}
-                    className={`absolute left-4 top-1/2 transform -translate-y-1/2 p-2 rounded-full shadow-lg transition-all duration-200 ${
+                    className={`absolute left-4 hidden lg:block top-1/2 transform -translate-y-1/2 p-2 rounded-full shadow-lg transition-all duration-200 ${
                       currentSlide === 0 
                         ? 'bg-gray-200 text-gray-400 cursor-not-allowed' 
                         : 'bg-white/80 hover:bg-white text-gray-800 hover:scale-110'
@@ -125,7 +125,7 @@ export default function SolutionSection(){
                   
                   <button
                     onClick={nextSlide}
-                    className={`absolute right-4 top-1/2 transform -translate-y-1/2 p-2 rounded-full shadow-lg transition-all duration-200 ${
+                    className={`absolute right-4 hidden lg:block top-1/2 transform -translate-y-1/2 p-2 rounded-full shadow-lg transition-all duration-200 ${
                       currentSlide === images.length - 1 
                         ? 'bg-gray-200 text-gray-400 cursor-not-allowed' 
                         : 'bg-white/80 hover:bg-white text-gray-800 hover:scale-110'
@@ -141,7 +141,7 @@ export default function SolutionSection(){
                       <button
                         key={index}
                         onClick={() => goToSlide(index)}
-                        className={`w-3 h-3 rounded-full transition-all duration-200 ${
+                        className={`w-2 lg:w-3 h-2 lg:h-3 rounded-full transition-all duration-200 ${
                           index === currentSlide
                             ? 'bg-green-600 scale-125'
                             : 'bg-white/60 hover:bg-white/80'
