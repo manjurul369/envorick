@@ -1,9 +1,8 @@
 "use client";
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Nav from '@/public/components/Nav';
 import HeroSection from '@/public/components/Home';
 import ProblemSection from '@/public/components/Problem';
-import ScrollReveal from '@/public/components/ScrollReveal';
 import SolutionSection from '@/public/components/Solution';
 import PerformanceSection from '@/public/components/Performance';
 import ImpactSection from '@/public/components/Impact';
@@ -11,6 +10,7 @@ import TimelineSection from '@/public/components/Timeline';
 import UpdatesSection from '@/public/components/Updates';
 import ContactSection from '@/public/components/Contact';
 import TeamSection from '@/public/components/Team';
+import Certifications from '@/public/components/Certifications';
 
 
 // Footer
@@ -36,6 +36,7 @@ export default function App() {
         <ImpactSection />
         <TimelineSection />
         <TeamSection />
+        <Certifications />
         <UpdatesSection />
         <ContactSection />
       </main>

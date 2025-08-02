@@ -1,7 +1,7 @@
 import React from 'react'
 import ScrollReveal from '@/public/components/ScrollReveal';
 import Image from 'next/image';
-import { bijoy, afrin, pushpo, josho, kallol, manjurul } from '../assets/team';
+import { bijoy, afrin, pushpo, josho, kallol, manjurul, tamim } from '../assets/team';
 
 export default function TeamSection() {
   const teamMembers = [
@@ -34,6 +34,11 @@ export default function TeamSection() {
       id: 6,
       name: "Afia Afrin Pushpo",
       image: pushpo
+    },
+    {
+      id: 7,
+      name: "Md. Tamim",
+      image: tamim
     }
   ];
 
@@ -56,7 +61,7 @@ export default function TeamSection() {
               animation="fadeUp"
             >
               <div className="text-center w-32 sm:w-36 md:w-40">
-                <div className="relative mb-4 overflow-hidden rounded-full mx-auto w-32 h-32 shadow-lg">
+                <div className="relative mb-4 overflow-hidden rounded-full mx-auto w-32 h-32 shadow-lg border-4 border-green-600">
                   <Image
                     src={member.image}
                     alt={member.name}
